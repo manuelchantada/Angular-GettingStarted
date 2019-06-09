@@ -1,10 +1,14 @@
 export interface IProduct {
-  productId: number;
-  productName: string;
-  productCode: string;
-  releaseDate: string;
-  description: string;
-  price: number;
-  starRating: number;
-  imageUrl: string;
+  Stock: IStock;
+  Id: number;
+  Nombre: string;
+  Codigo: string;
+  Descripcion: string;
+  Talle: string;
+  Variante: string;
+}
+
+export interface IStock {
+  Id: number,
+  Cantidad: number;
 }

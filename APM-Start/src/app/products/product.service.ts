@@ -8,8 +8,8 @@ import { catchError, tap} from 'rxjs/operators'
   providedIn: 'root'
 })
 export class ProductService {
-  //private productUrl = 'https://mvcmoviedatabase.azurewebsites.net/api/articulosApi'
-  private productUrl = 'api/products/products.json'
+  private productUrl = 'https://mvcmoviedatabase.azurewebsites.net/api/articulosApi'
+  //private productUrl = 'api/products/products.json'
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<IProduct[]>{

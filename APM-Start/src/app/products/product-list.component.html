@@ -25,32 +25,39 @@
                 {{showImages ? "Hide Images" : "Show Images" }}
               </button>
             </th>
-            <th>Product</th>
-            <th>Code</th>
-            <th>Available</th>
-            <th>Price</th>
-            <th>5 Star Rating</th>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+            <th>Talle</th>
+            <th>Variante</th>
+            <th>Descripcion</th>
+            <th>Cantidad</th>            
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let product of filteredProducts">
-            <td >
-              <img *ngIf="showImages"
+            <td>
+              <!--<img *ngIf="showImages"
                    [src]="product.imageUrl"
                    [title]="product.productName"
-                   [style.width.px]="imageWidth"                   
+                   [style.width.px]="imageWidth"
                    [style.margin.px]="imageMargin">
-            </td>
+            </td>-->
             <td>
-              <a [routerLink]="['/products', product.productId]">
-                {{product.productName}}
+              <a [routerLink]="['/products', product.Id]">
+                {{product.Nombre}}
               </a>
             </td>
-            <td>{{product.productCode | convertToSpaces: '-' | lowercase}}</td>
-            <td>{{product.releaseDate}}</td>
-            <td>{{product.price | currency: 'USD':'symbol':'1.2-2'}}</td>
-            <td><pm-star [rating]='product.starRating'
-                (ratingClicked)="onRatingClicked($event)"></pm-star></td>
+            <td>{{product.Codigo}}</td>
+            <td>{{product.Descripcion}}</td>
+            <td>{{product.Talle}}</td>
+            <td>{{product.Variante}}</td>
+            <td>{{product.Descripcion}}</td>
+            <td>{{product.Stock.Cantidad}}</td>
+            <!--<td>
+    <pm-star [rating]='product.starRating'
+             (ratingClicked)="onRatingClicked($event)"></pm-star>
+  </td>-->
           </tr>
         </tbody>
       </table>
