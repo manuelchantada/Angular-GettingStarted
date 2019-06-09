@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
   `//Interpolation
 })
 export class AppComponent {
-  pageTitle = 'Mi primer componente de angular';
+  pageTitle = 'Stock Manager';
   imageWidth: number = 50;
   imageMargin: number = 2;
   

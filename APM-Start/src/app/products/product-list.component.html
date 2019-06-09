@@ -30,7 +30,6 @@
             <th>Descripcion</th>
             <th>Talle</th>
             <th>Variante</th>
-            <th>Descripcion</th>
             <th>Cantidad</th>            
           </tr>
         </thead>
@@ -52,8 +51,9 @@
             <td>{{product.Descripcion}}</td>
             <td>{{product.Talle}}</td>
             <td>{{product.Variante}}</td>
-            <td>{{product.Descripcion}}</td>
-            <td>{{product.Stock.Cantidad}}</td>
+            <td
+                [ngClass]="{outOfStock: product.Stock.Cantidad==0 }"
+                >{{product.Stock.Cantidad}}</td>
             <!--<td>
     <pm-star [rating]='product.starRating'
              (ratingClicked)="onRatingClicked($event)"></pm-star>

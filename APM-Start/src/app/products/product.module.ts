@@ -16,7 +16,7 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule.forChild([
       { path: 'products', component: ProductListComponent },
       {
-        path: 'products/:id',
+        path: 'products/:Id',
         canActivate: [ProductDetailGuard],
         component: ProductDetailComponent
       }

@@ -1,6 +1,39 @@
 <div class="card" *ngIf="product">
   <div class="card-header">
-    {{pageTitle + ': '+ product.productName}}
+    {{pageTitle + ': '+ product.Nombre}}
+  </div>
+  <div class="card body">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-4">Nombre:</div>
+          <div class="col-md-8">{{product.Nombre}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Codigo:</div>
+          <div class="col-md-8">{{product.Codigo}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Descripción:</div>
+          <div class="col-md-8">{{product.Descripcion}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Talle:</div>
+          <div class="col-md-8">{{product.Talle}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Variante:</div>
+          <div class="col-md-8">{{product.Variante}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Cantidad:</div>
+          <div class="col-md-8"
+               [ngClass]="{outOfStock: product.Stock.Cantidad==0 }"
+               >{{product.Stock.Cantidad}}</div>
+        </div>
+      </div>
+
+    </div>
   </div>
   <div class="card-footer">
     <button class="btn btn-outline-secondary"
